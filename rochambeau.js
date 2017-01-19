@@ -97,7 +97,7 @@ function displayGameResult(resultId){
     }
 }
 function opengoogle(){
-    window.open("http://google.com", "width=100px");
+    window.open("http://google.com", "width=120,height=120");
 }
 
 function storePlayerChoice(choice) {
