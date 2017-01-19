@@ -96,6 +96,9 @@ function displayGameResult(resultId){
         document.getElementById(resultId).className = "alert alert-info";
     }
 }
+function opengoogle(){
+    window.open("http://google.com", "width=100px");
+}
 
 function storePlayerChoice(choice) {
     playerChoice = choice;
