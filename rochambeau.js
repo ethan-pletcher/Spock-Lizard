@@ -72,7 +72,7 @@ function updateScore(val){
 }
 
 function displayGameResult(resultId){
-    // Define an array of text labels for the choices 0, 1, 2;
+    // Define an array of text labels for the choices 0, 1, 2, 3, 4;
     var choices = ["Rock", "Paper", "Scissors", "Spock", "Lizard"];
     // Now play the game and store the result
     var result = playGame();
