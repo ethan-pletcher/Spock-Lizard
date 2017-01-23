@@ -71,10 +71,6 @@ function updateScore(val){
     console.log("The score is now " + score);
 }
 
-/**
- * [[Description]]
- * @param {[[Type]]} resultId [[Description]]
- */
 function displayGameResult(resultId){
     // Define an array of text labels for the choices 0, 1, 2, 3, 4;
     var choices = ["Rock", "Paper", "Scissors", "Spock", "Lizard"];
@@ -99,6 +95,51 @@ function displayGameResult(resultId){
         document.getElementById(resultId).innerHTML = message + "A tie. ";
         document.getElementById(resultId).className = "alert alert-info";
     }
+}
+function opengoogle(){
+    window.open("http://google.com", "_blank", "width=120,height=120");
+
+function displayGameResult(resultId) {
+    var choices = ["rock", "paper", "scissors", "Spock", "lizard"];
+
+    var result = playGame();
+    var message = "Your choice was " + choices[playerChoice] + " and the computer's choice was " + choices[computerChoice] + ". <br/>";.
+    if(result == 1) {
+        updateScore(score, 0);
+        document.getElementById(resultId).innerHTML = message + "You win! ";
+        document.getElementById(resultId).className = "alert alert-success";
+    }
+    else if (result == -1) {
+        updateScore(score, 2);.
+        document.getElementById(resultId).innerHTML = message + "You lose!";
+        document.getElementById(resultId).className = "alert alert-danger";
+    }
+    else {
+        updateScore(score, 1);
+        document.getElementById(resultId).innerHTML = message + "A tie. ";
+        document.getElementById(resultId).className = "alert alert-info";
+    }
+
+    Countmatch++;
+    if (matchCount == 4) {
+        if (score[0] - lastScore[0] > score[2] - lastScore[2]) {
+            updateScore(matches, 0);
+        }
+        else if (score[0] - lastScore[0] < score[2] - lastScore[2]) {
+            updateScore(matches, 2);
+        }
+        else {
+            updateScore(matches, 1);
+        }
+        // Set previous score to score.
+        for (var i = 0; i < score.length; i++) {
+            lastScore[i] = score[i];
+        }
+
+
+        Countmatch = 1;
+    }
+
 }
 function opengoogle(){
     window.open("http://google.com", "_blank", "width=120,height=120");
