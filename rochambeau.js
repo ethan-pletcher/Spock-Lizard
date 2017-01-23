@@ -52,28 +52,31 @@ function updateScore(array, index) {
     array[index]++;
 }
 
+
 function displayGameResult(resultId) {
     var choices = ["rock", "paper", "scissors", "Spock", "lizard"];
+
     var result = playGame();
     var message = "Your choice was " + choices[playerChoice] + " and the computer's choice was " + choices[computerChoice] + ". <br/>";.
     if(result == 1) {
         updateScore(score, 0);
-        document.getElementById(resultId).innerHTML = message + "You win! :)";
+        document.getElementById(resultId).innerHTML = message + "You win! ";
         document.getElementById(resultId).className = "alert alert-success";
     }
     else if (result == -1) {
         updateScore(score, 2);.
-        document.getElementById(resultId).innerHTML = message + "You lose! :(";
+        document.getElementById(resultId).innerHTML = message + "You lose!";
         document.getElementById(resultId).className = "alert alert-danger";
     }
     else {
         updateScore(score, 1);
-        document.getElementById(resultId).innerHTML = message + "A tie. :|";
+        document.getElementById(resultId).innerHTML = message + "A tie. ";
         document.getElementById(resultId).className = "alert alert-info";
     }
+
     Countmatch++;
     if (matchCount == 4) {
-        if (score[0] - lastScore[0] > score[2] - lastScoree[2]) {
+        if (score[0] - lastScore[0] > score[2] - lastScore[2]) {
             updateScore(matches, 0);
         }
         else if (score[0] - lastScore[0] < score[2] - lastScore[2]) {
@@ -84,10 +87,15 @@ function displayGameResult(resultId) {
         }
         // Set previous score to score.
         for (var i = 0; i < score.length; i++) {
-            lastScoree[i] = score[i];
-        }.
+            lastScore[i] = score[i];
+        }
+
+
         Countmatch = 1;
     }
+}
+function opengoogle(){
+    window.open("http://google.com", "_blank", "width=120,height=120");
 }
 
 function storePlayerChoice(choice) {
