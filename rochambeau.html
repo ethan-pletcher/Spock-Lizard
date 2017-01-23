@@ -1,47 +1,51 @@
 <<!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
-<head>
-    <title>Rochambeau2</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel = "stylesheet " href = "rochambeau.css" >
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="rochambeau.js"></script>
-</head>
+    <head>
+        <title>Rochambeau2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet " href="rochambeau.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="rochambeau.js"></script>
+    </head>
 
-<body>
+    <body>
+        <center>
+            <p/>
+            <p/>
+            <div class="container">
+                <h1>Rock, Paper, Scissors Game</h1>
+                <p>Let's Play Rock, Paper Scissors! Press your choice and then press PLAY!.</p>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default" onclick="storePlayerChoice(0)">Rock<img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi96ZL0zs7RAhXkyFQKHRU5BeMQjRwIBw&url=http%3A%2F%2Fwww.123rf.com%2Fclipart-vector%2Flarge_boulder.html&bvm=bv.144224172,d.cGw&psig=AFQjCNHrc2OToJ5fPs72lSC1O8EzGYWfEw&ust=1484929301866017" alt="" height="40" width="40"></button>
+                    <button type="button" class="btn btn-default" onclick="storePlayerChoice(1)">Paper<img src="http://freedesignfile.com/upload/2013/06/Paper-31.jpg" alt="" height="40" width="40"></button>
+                    <button type="button" class="btn btn-default" onclick="storePlayerChoice(2)">Scissors <img src="http://www2.fiskars.com/var/fiskars_amer/storage/images/frontpage2/products/kids-and-school/kids-scissors-ages-4/softgrip-left-handed-pointed-tip-kids-scissors-5/16381-9-eng-US/Softgrip-Left-handed-Pointed-tip-Kids-Scissors-5.png" alt="" height="40" width="40"></button>
+                    <button type="button" class="btn btn-default" onclick="storePlayerChoice(3)">Spock<img src="http://vignette2.wikia.nocookie.net/epicrapbattlesofhistory/images/c/c1/Spock_Based_On.png/revision/latest?cb=20160815154242" alt="" height="40" width="40"></button>
+                    <button type="button" class="btn btn-default" onclick="storePlayerChoice(4)">Lizard<img src="http://vignette1.wikia.nocookie.net/pixar/images/8/86/Randall.png/revision/latest/scale-to-width-down/282?cb=20160404023111" alt="" height="40" width="30"></button>
+                </div>
+                <p></p>
+                <input type="button" onclick="displayGameResult('result'), displayScoreBoard('wins', 'losses', 'ties')" value="Play" class="btn btn-primary">
+                <p></p>
+                <div id="result"></div>
+                <div id="scoreboard">
+                    <table class="table">
+                        <tr>
+                            <td>Wins:</td>
+                            <td>Losses:</td>
+                            <td>Ties:</td>
+                        </tr>
+                        <tr>
+                            <td id="wins">0</td>
+                            <td id="losses">0</td>
+                            <td id="ties">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <input type="button" onclick="opengoogle()" , class="btn btn-primary"> </center>
+    </body>
 
-    <center>
-    <p/><p/>
-    <div class="container">
-        <h1>Rock, Paper, Scissors Game</h1>
-        <p>Let's Play Rock, Paper Scissors! Press your choice and then press PLAY!.</p>
-                    <div class="btn-group" role="group" aria-label="...">
-                        <button type="button" class="btn btn-default" onclick="storePlayerChoice(0)">Rock<img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi96ZL0zs7RAhXkyFQKHRU5BeMQjRwIBw&url=http%3A%2F%2Fwww.123rf.com%2Fclipart-vector%2Flarge_boulder.html&bvm=bv.144224172,d.cGw&psig=AFQjCNHrc2OToJ5fPs72lSC1O8EzGYWfEw&ust=1484929301866017" alt="" height="40" width="40"></button>
-                        <button type="button" class="btn btn-default" onclick="storePlayerChoice(1)">Paper<img src="http://freedesignfile.com/upload/2013/06/Paper-31.jpg" alt="" height="40" width="40"></button>
-                        <button type="button" class="btn btn-default" onclick="storePlayerChoice(2)">Scissors <img src="http://www2.fiskars.com/var/fiskars_amer/storage/images/frontpage2/products/kids-and-school/kids-scissors-ages-4/softgrip-left-handed-pointed-tip-kids-scissors-5/16381-9-eng-US/Softgrip-Left-handed-Pointed-tip-Kids-Scissors-5.png" alt="" height="40" width="40"></button>
-                        <button type="button" class="btn btn-default" onclick="storePlayerChoice(3)">Spock<img src="http://vignette2.wikia.nocookie.net/epicrapbattlesofhistory/images/c/c1/Spock_Based_On.png/revision/latest?cb=20160815154242" alt="" height="40" width="40"></button>
-                        <button type="button" class="btn btn-default" onclick="storePlayerChoice(4)">Lizard<img src="http://vignette1.wikia.nocookie.net/pixar/images/8/86/Randall.png/revision/latest/scale-to-width-down/282?cb=20160404023111" alt="" height="40" width="30"></button>
-                    </div>
-        <p></p>
-        <input type="button" onclick="displayGameResult('result'), displayScoreBoard('wins', 'losses', 'ties')" value="Play" class="btn btn-primary">
-        <p></p>
-        <div id="result"></div>
-        <div id="scoreboard">
-        <table class="table">
-            <tr>
-                <td>Wins:</td><td>Losses:</td><td>Ties:</td>
-            </tr>
-            <tr>
-                <td id="wins">0</td><td id="losses">0</td><td id="ties">0</td>
-            </tr>
-        </table>
-        </div>
-    </div>
-        <input type="button" onclick="opengoogle()", class="btn btn-primary">
-        </center>
-</body>
-</html>
+    </html>

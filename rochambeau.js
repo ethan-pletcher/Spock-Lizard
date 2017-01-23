@@ -1,9 +1,8 @@
-// This is the varaible that stores the score.
-// score[0] = wins, score[1] = ties, score[2] = losses
-var score = [0,0,0];
 
-// The variables store the current player's and computer's choices
-// 0 = Rock, 1 = Paper, 2 = Scissors
+var score = [0,0,0];
+var lastScore+ [0,0,0];
+var matchCount = 1;
+var matches = [0, 0, 0];
 var playerChoice;
 var computerChoice;
 
@@ -60,15 +59,20 @@ function playGame(){
     }
 }
 
-function displayScoreBoard(winsId, lossesId, tiesId){
-    document.getElementById(winsId).innerHTML = score[0];
-    document.getElementById(lossesId).innerHTML = score[2];
-    document.getElementById(tiesId).innerHTML = score[1];
+function displayScoreBoard(winsId, lossesId, tiesId, matchesWonID, matchesLostID, matchesTiedID) {
+// Update score display.
+document.getElementById(winsId).innerHTML = score[0];
+document.getElementById(lossesId).innerHTML = score[2];
+document.getElementById(tiesId).innerHTML = score[1];
+
+// Update matches display.
+document.getElementById(matchesWonID).innerHTML = matches[0];
+document.getElementById(matchesLostID).innerHTML = matches[2];
+document.getElementById(matchesTiedID).innerHTML = matches[1];
 }
 
-function updateScore(val){
-    ++score[val];
-    console.log("The score is now " + score);
+function updateScore(array, index) {
+array[index]++;
 }
 
 function displayGameResult(resultId){
@@ -95,6 +99,30 @@ function displayGameResult(resultId){
         document.getElementById(resultId).innerHTML = message + "A tie. ";
         document.getElementById(resultId).className = "alert alert-info";
     }
+    .
+matchCount++;
+
+.
+if (matchCount == 4) {
+    if (score[0] - lastScore[0] > score[2] - lastScore[2]) {
+
+        updateScore(matches, 0);
+    } else if (score[0] -  lastScore[0] < score[2] - lastScore[2]) {
+
+        updateScore(matches, 2);
+    } else {
+
+        updateScore(matches, 1);
+    }
+
+    // Set previous score to score.
+    for (var i = 0; i < score.length; i++) {
+        previousScore[i] = score[i];
+    }
+
+    // Reset match count.
+    matchCount = 1;
+}
 }
 function opengoogle(){
     window.open("http://google.com", "_blank", "width=120,height=120");
