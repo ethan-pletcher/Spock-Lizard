@@ -99,6 +99,7 @@ function displayGameResult(resultId){
 function opengoogle(){
     window.open("http://google.com", "_blank", "width=120,height=120");
 
+
 function displayGameResult(resultId) {
     var choices = ["rock", "paper", "scissors", "Spock", "lizard"];
 
@@ -140,6 +141,9 @@ function displayGameResult(resultId) {
         Countmatch = 1;
     }
 
+}
+function opengoogle(){
+    window.open("http://google.com", "_blank", "width=120,height=120");
 }
 function opengoogle(){
     window.open("http://google.com", "_blank", "width=120,height=120");
