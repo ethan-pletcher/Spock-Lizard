@@ -1,15 +1,15 @@
 body {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pierre_ciseaux_feuille_l%C3%A9zard_spock_aligned.svg/200px-Pierre_ciseaux_feuille_l%C3%A9zard_spock_aligned.svg.png);
-background-repeat:no-repeat;
-    background-position:left top;
+    background-repeat: no-repeat;
+    background-position: left top;
     background-size: cover;
-
 }
+
 #banner {
     height: 175px;
-    border-radius:20px;
-    text-align:center;
-    padding-top:25px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 25px;
     /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(green, lightgreen);
     /* For Safari 5.1 to 6.0 */
@@ -22,13 +22,13 @@ background-repeat:no-repeat;
 }
 
 .win {
-    color:green;
+    color: green;
 }
 
 .loss {
-    color:red;
+    color: red;
 }
 
 .tie {
-    color:grey;
+    color: grey;
 }
